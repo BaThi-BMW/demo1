@@ -266,7 +266,10 @@ function showView(view, articleId){
   $(`.main-nav a[data-nav="${view}"]`).addClass("active");
   $("#mainNav").removeClass("open");
   $("#navToggle").attr("aria-expanded", "false");
-  window.scrollTo({top:0, behavior:"instant" in window ? "instant" : "auto"});
+  
+  // Sửa lỗi giá trị "instant" không hợp lệ ở một số môi trường kiểm thử CI
+  window.scrollTo({top: 0, behavior: "auto"});
+  
   if(articleId){
     setTimeout(() => openModal(articleId), 60);
   }
@@ -381,12 +384,11 @@ $(function () {
     $(this).attr("aria-expanded", open ? "true" : "false");
   });
 
-  // Nav / internal links
+  // Tối ưu hóa click Nav / internal links: Để hashchange tự quản lý router nhằm tránh lỗi xung đột bất đồng bộ
   $(document).on("click", "[data-nav]", function(e){
     const targetHash = $(this).attr("href");
     if(targetHash && targetHash.startsWith("#")){
       const articleId = $(this).data("article");
-      setTimeout(() => routeFromHash(), 0);
       if(articleId){
         setTimeout(() => openModal(articleId), 90);
       }
@@ -448,11 +450,11 @@ $(function () {
     }
   });
 
-  // Back to top
+  // Back to top - Sửa lại phương thức animate mượt mà bằng native JS, tối ưu hiệu năng thiết bị di động
   $(window).on("scroll", function(){
     $("#backToTop").toggleClass("show", $(window).scrollTop() > 400);
   });
   $("#backToTop").on("click", function(){
-    $("html, body").animate({scrollTop:0}, 400);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
