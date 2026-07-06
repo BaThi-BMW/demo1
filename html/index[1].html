@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAISON — Tạp chí thời trang & làm đẹp</title>
+<meta name="description" content="MAISON — tin tức, sự kiện, xu hướng thời trang và làm đẹp trong và ngoài nước.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+<a href="#main" class="skip-link">Bỏ qua tới nội dung chính</a>
+
+<!-- ============ HEADER / MASTHEAD ============ -->
+<header class="masthead">
+  <div class="masthead-top container">
+    <a href="index.html" class="logo">MAI<span>SON</span></a>
+    <span class="masthead-date" id="todayDate"></span>
+    <div class="masthead-tools">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="headerSearch" placeholder="Tìm bài viết…" aria-label="Tìm kiếm bài viết">
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Mở menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+  <nav class="main-nav" aria-label="Menu chính">
+    <ul>
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="tin-tuc.html">Tin tức</a></li>
+      <li><a href="su-kien.html">Sự kiện</a></li>
+      <li><a href="xu-huong.html">Xu hướng</a></li>
+      <li><a href="lam-dep.html">Làm đẹp</a></li>
+      <li><a href="#sitemap">Sơ đồ trang</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-eyebrow"><span class="dot"></span><span class="eyebrow">Số ra tuần này · 06/07/2026</span></div>
+        <h1>Thời trang là <em>ngôn ngữ</em><br>bạn chưa từng nói bằng lời.</h1>
+        <p class="hero-sub">Cập nhật tin tức, sự kiện, xu hướng và bí quyết làm đẹp trong nước lẫn quốc tế — chọn lọc mỗi ngày bởi đội ngũ biên tập MAISON.</p>
+        <div class="hero-cta">
+          <a href="tin-tuc.html" class="btn btn-primary">Đọc tin mới nhất <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#sitemap" class="btn btn-outline">Xem sơ đồ trang</a>
+        </div>
+      </div>
+      <a href="tin-tuc.html#bai-viet-tt-01" class="hero-featured" style="display:block;">
+        <div class="tag-swatch sw-tin-tuc" style="height:120px;border-radius:2px;">
+          <span class="card-ribbon">Tin tức</span>
+          <i class="fa-solid fa-newspaper"></i>
+        </div>
+        <h3>Thương hiệu Việt lần đầu góp mặt tại Tuần lễ Thời trang Paris</h3>
+        <p>Một dấu mốc mới cho ngành thiết kế trong nước trên đấu trường quốc tế.</p>
+        <div class="meta eyebrow">Minh Anh · 28/06/2026</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ TIN TỨC ============ -->
+  <section class="section cat-tin-tuc" id="tin-tuc">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">Tin tức</span>
+          <h2 style="margin-top:12px;">Chuyển động ngành thời trang</h2>
+          <p class="desc">Tin tức và phân tích mới nhất về ngành công nghiệp thời trang trong nước và quốc tế.</p>
+        </div>
+        <a href="tin-tuc.html" class="link-more">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="article-grid" data-category="tin-tuc" data-limit="3"></div>
+    </div>
+  </section>
+
+  <!-- ============ SỰ KIỆN ============ -->
+  <section class="section cat-su-kien" id="su-kien">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">Sự kiện</span>
+          <h2 style="margin-top:12px;">Tuần lễ, show diễn & triển lãm</h2>
+          <p class="desc">Những sự kiện đáng chú ý quy tụ giới mộ điệu thời trang trong và ngoài nước.</p>
+        </div>
+        <a href="su-kien.html" class="link-more">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="article-grid" data-category="su-kien" data-limit="3"></div>
+    </div>
+  </section>
+
+  <!-- ============ XU HƯỚNG ============ -->
+  <section class="section cat-xu-huong" id="xu-huong">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">Xu hướng</span>
+          <h2 style="margin-top:12px;">Xu hướng thời trang mùa mới</h2>
+          <p class="desc">Chất liệu, phom dáng và bảng màu đang định hình mùa mốt sắp tới.</p>
+        </div>
+        <a href="xu-huong.html" class="link-more">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="article-grid" data-category="xu-huong" data-limit="3"></div>
+    </div>
+  </section>
+
+  <!-- ============ LÀM ĐẸP ============ -->
+  <section class="section cat-lam-dep" id="lam-dep">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">Làm đẹp</span>
+          <h2 style="margin-top:12px;">Chăm sóc da, tóc & trang điểm</h2>
+          <p class="desc">Bí quyết làm đẹp và tư vấn từ chuyên gia da liễu, chuyên viên trang điểm.</p>
+        </div>
+        <a href="lam-dep.html" class="link-more">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="article-grid" data-category="lam-dep" data-limit="3"></div>
+    </div>
+  </section>
+
+  <!-- ============ SITEMAP ============ -->
+  <section class="section sitemap-section" id="sitemap">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-tag" style="color:var(--gold);border-color:var(--gold);">Sơ đồ trang</span>
+          <h2 style="margin-top:12px;color:#fff;">Toàn bộ nội dung của MAISON</h2>
+          <p class="desc">Điều hướng nhanh tới mọi trang và chuyên mục trên website.</p>
+        </div>
+      </div>
+      <div class="sitemap-grid">
+        <div class="sitemap-col">
+          <h4>Trang chủ</h4>
+          <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="index.html#tin-tuc">— Chuyên mục Tin tức</a></li>
+            <li><a href="index.html#su-kien">— Chuyên mục Sự kiện</a></li>
+            <li><a href="index.html#xu-huong">— Chuyên mục Xu hướng</a></li>
+            <li><a href="index.html#lam-dep">— Chuyên mục Làm đẹp</a></li>
+          </ul>
+        </div>
+        <div class="sitemap-col">
+          <h4>Tin tức</h4>
+          <ul>
+            <li><a href="tin-tuc.html">Trang chuyên mục Tin tức</a></li>
+            <li><a href="tin-tuc.html#bai-viet-tt-01">Thương hiệu Việt tại Paris Fashion Week</a></li>
+            <li><a href="tin-tuc.html#bai-viet-tt-02">Chuỗi cung ứng thời trang bền vững</a></li>
+            <li><a href="tin-tuc.html#bai-viet-tt-04">NTK trẻ và bài toán AI</a></li>
+          </ul>
+        </div>
+        <div class="sitemap-col">
+          <h4>Sự kiện</h4>
+          <ul>
+            <li><a href="su-kien.html">Trang chuyên mục Sự kiện</a></li>
+            <li><a href="su-kien.html#bai-viet-sk-01">Tuần lễ Thời trang Quốc tế mùa Thu</a></li>
+            <li><a href="su-kien.html#bai-viet-sk-02">Triển lãm Ký ức vải vóc</a></li>
+            <li><a href="su-kien.html#bai-viet-sk-03">Gala từ thiện</a></li>
+          </ul>
+        </div>
+        <div class="sitemap-col">
+          <h4>Xu hướng & Làm đẹp</h4>
+          <ul>
+            <li><a href="xu-huong.html">Trang chuyên mục Xu hướng</a></li>
+            <li><a href="xu-huong.html#bai-viet-xh-01">Bảng màu đất nung</a></li>
+            <li><a href="lam-dep.html">Trang chuyên mục Làm đẹp</a></li>
+            <li><a href="lam-dep.html#bai-viet-ld-01">Chăm sóc da giao mùa</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-row">
+    <a href="index.html" class="logo">MAI<span>SON</span></a>
+    <span class="footer-meta">© 2026 MAISON Magazine · Nội dung minh hoạ cho mục đích học tập</span>
+  </div>
+</footer>
+
+<!-- ============ MODAL: CHI TIẾT BÀI VIẾT + BÌNH LUẬN ============ -->
+<div class="modal-overlay" id="articleModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" aria-label="Đóng"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-hero" id="modalHero"></div>
+    <div class="modal-content">
+      <div class="meta-row">
+        <span id="modalCategory" style="font-weight:700;"></span>
+        <span><i class="fa-regular fa-calendar"></i> <span id="modalDate"></span></span>
+        <span><i class="fa-regular fa-user"></i> <span id="modalAuthor"></span></span>
+        <span><i class="fa-regular fa-clock"></i> <span id="modalReadTime"></span></span>
+      </div>
+      <h2 id="modalTitle"></h2>
+      <div class="article-body" id="modalBody"></div>
+
+      <div class="related-box" id="relatedBox">
+        <h4>Bài viết liên quan</h4>
+        <div class="related-list" id="relatedList"></div>
+      </div>
+
+      <div class="comments-box">
+        <h4>Bình luận (<span id="commentCount">0</span>)</h4>
+        <form class="comment-form" id="commentForm">
+          <div class="row">
+            <input type="text" id="commentName" placeholder="Tên của bạn" required maxlength="40">
+          </div>
+          <textarea id="commentText" placeholder="Chia sẻ cảm nhận của bạn về bài viết này…" required maxlength="500"></textarea>
+          <button type="submit" class="btn btn-primary">Gửi bình luận</button>
+        </form>
+        <div class="comment-list" id="commentList"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Lên đầu trang"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+$(function () {
+  $("#todayDate").text(new Date().toLocaleDateString("vi-VN", { weekday: "long", year: "numeric", month: "2-digit", day: "2-digit" }));
+
+  ["tin-tuc", "su-kien", "xu-huong", "lam-dep"].forEach(cat => {
+    const $grid = $(`.article-grid[data-category="${cat}"]`);
+    const limit = parseInt($grid.data("limit"), 10) || null;
+    renderGrid($grid, getArticlesByCategory(cat), limit);
+  });
+  refreshReveal();
+});
+</script>
+</body>
+</html>
